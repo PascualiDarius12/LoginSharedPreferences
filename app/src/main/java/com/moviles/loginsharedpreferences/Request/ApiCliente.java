@@ -52,7 +52,7 @@ public class ApiCliente {
         String pass = sp.getString("password","-1");
         Long dni = sp.getLong("dni",-1);
 
-        if(mail.equals(email) && password.equals(pass)){
+        if(mail.trim().equals(email.trim()) && password.trim().equals(pass.trim())){
             Usuario usuario = new Usuario(nombre, apellido, dni, email, password);
             return usuario;
         }else{
